@@ -251,12 +251,14 @@ int playCard(int handPos, int choice1, int choice2, int choice3, struct gameStat
   //check if selected card is an action
   if ( card < adventurer || card > treasure_map )
     {
+	printf("test 1\n");
       return -1;
     }
 	
   //play card
   if ( cardEffect(card, choice1, choice2, choice3, state, handPos, &coin_bonus) < 0 )
     {
+	printf("Test 2\n");
       return -1;
     }
 	
