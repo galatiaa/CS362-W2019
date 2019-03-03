@@ -251,12 +251,14 @@ int playCard(int handPos, int choice1, int choice2, int choice3, struct gameStat
   //check if selected card is an action
   if ( card < adventurer || card > treasure_map )
     {
+	printf("test 1\n");
       return -1;
     }
 	
   //play card
   if ( cardEffect(card, choice1, choice2, choice3, state, handPos, &coin_bonus) < 0 )
     {
+	printf("Test 2\n");
       return -1;
     }
 	
@@ -651,7 +653,7 @@ while(drawntreasure<2){
 	}
 	drawCard(currentPlayer, state);
 	cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-	if (cardDrawn == copper && cardDrawn == silver && cardDrawn == gold)
+	if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
 	  drawntreasure++;
 	else{
 	  temphand[z]=cardDrawn;
@@ -659,7 +661,7 @@ while(drawntreasure<2){
 	  z++;
 	}
       }
-      while(z-1==0){
+      while(z-1>=0){
 	state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
 	z=z-1;
       }
@@ -668,13 +670,13 @@ while(drawntreasure<2){
 
 int smithCard(int i, int currentPlayer, struct gameState *state, int handPos){
 	//+3 Cards
-      for (i = 0; i < 5; i++)
+      for (i = 0; i < 3; i++)
 	{
 	  drawCard(currentPlayer, state);
 	}
 			
       //discard card from hand
-      discardCard(handPos, currentPlayer, state, 1);
+      discardCard(handPos, currentPlayer, state, 0);
       return 0;
 }
 
