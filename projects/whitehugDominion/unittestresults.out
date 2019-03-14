@@ -1,0 +1,47 @@
+File 'unittest1.c'
+Lines executed:100.00% of 21
+Branches executed:100.00% of 4
+Taken at least once:50.00% of 4
+Calls executed:83.33% of 12
+Creating 'unittest1.c.gcov'
+
+File '<built-in>'
+No executable lines
+No branches
+No calls
+Removing '<built-in>.gcov'
+
+File 'unittest2.c'
+Lines executed:100.00% of 9
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+Calls executed:80.00% of 5
+Creating 'unittest2.c.gcov'
+
+File 'unittest3.c'
+Lines executed:100.00% of 9
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+Calls executed:80.00% of 5
+Creating 'unittest3.c.gcov'
+
+File 'unittest4.c'
+Lines executed:100.00% of 9
+Branches executed:100.00% of 2
+Taken at least once:50.00% of 2
+Calls executed:80.00% of 5
+Creating 'unittest4.c.gcov'
+
+File 'cardtest1.c'
+No executable lines
+No branches
+No calls
+Removing 'cardtest1.c.gcov'
+
+File 'cardtest2.c'
+No executable lines
+No branches
+No calls
+Removing 'cardtest2.c.gcov'
+
+Lines executed:100.00% of 48
